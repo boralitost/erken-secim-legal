@@ -39,7 +39,7 @@
     Uygulama: <strong>Erken Seçim Oyunu 2027</strong><br />
     Platform: Android ve iOS<br />
     Geliştirici: Vio Games<br />
-    Son güncelleme: 16 Ekim 2026
+    Son güncelleme: 8 Kasım 2026
   </p>
 
   <div class="note">
@@ -67,6 +67,7 @@
     <li>Hassas konum (GPS)</li>
     <li>Rehber, fotoğraf, mikrofon veya kamera içeriği</li>
     <li>Kart numarası. Ödemeler Google Play ve App Store tarafından alınır.</li>
+    <li>Bildirim belirteci. Ayarlar’daki bildirim anahtarı yalnızca cihazda durur.</li>
   </ul>
 
   <h2>3. İşlediğimiz bilgiler</h2>
@@ -76,7 +77,7 @@
     <li><strong>Firebase Crashlytics:</strong> cihaz modeli, işletim sistemi sürümü, çökme izi ve ilgili kurulum kimlikleri. Bu veriyi hataları düzeltmek için kullanırız.</li>
     <li><strong>Reklam:</strong> reklam kimliği (Android reklam kimliği veya iOS IDFA, izin verildiyse), yaklaşık konum (ülke veya şehir düzeyi), IP adresi, cihaz bilgisi ve reklam etkileşimi. Bunları aşağıdaki reklam SDK’ları işler.</li>
     <li><strong>Satın alma:</strong> uygulama içi ürün kimliği ve işlem sonucu. Kart bilgisi bizde saklanmaz.</li>
-    <li><strong>Bildirim belirteci:</strong> bildirimleri açarsanız, hatırlatma göndermek için.</li>
+    <li><strong>Liderlik tablosu:</strong> seçtiğiniz oyuncu adı, parti adı, parti logosu ve siyasi güç puanı. Bunlar herkese açık tabloda görünür. Unity Gaming Services’e anonim bir oyuncu kimliğiyle gönderilir. E-posta veya şifre ile hesap açılmaz.</li>
   </ul>
 
   <h2>4. Bilgileri neden kullanırız</h2>
@@ -86,6 +87,7 @@
     <li>Reklam göstermek ve reklam performansını ölçmek</li>
     <li>Çökme ve hataları düzeltmek</li>
     <li>Kullanımı ölçmek</li>
+    <li>Herkese açık liderlik tablosunu göstermek</li>
     <li>Destek taleplerine cevap vermek</li>
     <li>Mağaza ve yasal yükümlülüklere uymak</li>
   </ul>
@@ -106,7 +108,9 @@
   <p>
     AB, İngiltere ve gerekli diğer bölgelerde kişiselleştirilmiş reklamdan önce
     Google UMP ile izin istenir. iOS’ta izleme izni (ATT) ayrıca sorulabilir.
-    Seçiminizi daha sonra cihazın reklam ve izleme ayarlarından değiştirebilirsiniz.
+    Seçiminizi daha sonra Ayarlar’daki Reklam tercihleri bölümünden değiştirebilirsiniz.
+    Bu seçenek, izin gereken bölgelerde görünür. Ayrıca cihazın reklam ve izleme
+    ayarlarını kullanabilirsiniz.
   </p>
 
   <h2>6. Firebase Analytics ve Crashlytics</h2>
@@ -135,7 +139,7 @@
   <ul>
     <li>Google (Firebase Analytics, Firebase Crashlytics, AdMob, UMP, Google Play)</li>
     <li>AppLovin (MAX ve AppLovin reklam ağı)</li>
-    <li>Unity (Unity Ads)</li>
+    <li>Unity (Unity Ads, anonim giriş ve liderlik tablosu)</li>
     <li>MAX aracılığında açık olan diğer reklam ağları</li>
     <li>Apple (App Store), iOS kullanıyorsanız</li>
   </ul>
@@ -151,7 +155,7 @@
       <tr>
         <td>Oyun kaydı</td>
         <td>Cihazınız</td>
-        <td>Uygulamayı silene kadar. Bulutta hesap tutmayız.</td>
+        <td>Uygulamayı silene kadar. Oyun kaydının bulut kopyasını tutmayız.</td>
       </tr>
       <tr>
         <td>Çökme kayıtları</td>
@@ -179,6 +183,11 @@
         <td>Google bu veriyi kendi gizlilik politikasına göre tutar. Tek bir gün sayısı yayınlamaz. Reklam tercihlerinizi Google Reklam Merkezi’nden yönetebilirsiniz.</td>
       </tr>
       <tr>
+        <td>Liderlik tablosu kaydı</td>
+        <td>Unity Gaming Services</td>
+        <td>Oyuncu adı, parti, logo ve puan, silme talebinize kadar Unity’nin oyuncu gizlilik politikasına göre tutulur.</td>
+      </tr>
+      <tr>
         <td>Ödeme kaydı</td>
         <td>Google Play veya App Store</td>
         <td>Mağazanın kendi saklama kuralı. Kart verisi bize gelmez.</td>
@@ -191,7 +200,7 @@
     <li>Bize ulaşan destek yazışması: <a href="mailto:coinminervio@gmail.com">coinminervio@gmail.com</a></li>
     <li>AppLovin: AppLovin Gizlilik Yönetimi uygulaması veya <a href="mailto:dataprotection@applovin.com">dataprotection@applovin.com</a></li>
     <li>Google reklam verisi: <a href="https://myadcenter.google.com" rel="noopener">Google Reklam Merkezi</a></li>
-    <li>Unity: Unity oyuncu gizlilik politikasındaki başvuru yolu</li>
+    <li>Unity Ads ve liderlik tablosu: Unity oyuncu gizlilik politikasındaki başvuru yolu. Liderlik kaydı için bize de yazabilirsiniz.</li>
   </ul>
   <p>
     Üçüncü taraf, yasal yükümlülük, dolandırıcılık önleme veya anlaşmazlık için
@@ -209,7 +218,8 @@
   <p>
     Bulunduğunuz yere göre verinize erişme, düzeltme, silme veya işlemeyi
     kısıtlama ve rızayı geri çekme hakkınız olabilir. Yukarıdaki e-posta ile
-    yazabilirsiniz. Ayrıca cihaz ve mağaza reklam ayarlarını kullanabilirsiniz.
+    yazabilirsiniz. İzin gereken bölgelerde Ayarlar’daki Reklam tercihleri bölümünü,
+    ayrıca cihaz ve mağaza reklam ayarlarını kullanabilirsiniz.
   </p>
 
   <h2>13. Yurt dışına aktarım</h2>
@@ -237,7 +247,7 @@
       App: <strong>Erken Seçim Oyunu 2027</strong><br />
       Platforms: Android and iOS<br />
       Developer: Vio Games<br />
-      Last updated: 16 October 2026
+      Last updated: 8 November 2026
     </p>
 
     <div class="note">
@@ -260,6 +270,7 @@
       <li>Precise GPS location</li>
       <li>Contacts, photos, microphone, or camera content</li>
       <li>Full payment card numbers. Google Play and the App Store process payments.</li>
+      <li>Push tokens. The notifications switch in Settings stays on the device.</li>
     </ul>
 
     <h2>What we process</h2>
@@ -269,7 +280,7 @@
       <li><strong>Firebase Crashlytics:</strong> device model, OS version, crash traces, and related installation identifiers.</li>
       <li><strong>Ads:</strong> advertising identifier (Android advertising ID or iOS IDFA where allowed), coarse location, IP address, device details, and ad interactions, processed by the ad SDKs below.</li>
       <li><strong>Purchases:</strong> product id and transaction result only.</li>
-      <li><strong>Push token</strong> if you turn notifications on.</li>
+      <li><strong>Leaderboard:</strong> the player name, party name, party logo, and political power score you choose. These appear on the public board. They are sent to Unity Gaming Services with an anonymous player id. There is no email or password account.</li>
     </ul>
 
     <h2>Advertising SDKs</h2>
@@ -289,6 +300,9 @@
     <p>
       In the EEA, UK, and other regions where required, Google UMP asks for consent
       before personalized ads. On iOS, App Tracking Transparency may also be shown.
+      You can change that choice later under Reklam tercihleri in Settings.
+      That entry appears in regions where consent is required. You can also use
+      the device ad and tracking settings.
     </p>
 
     <h2>Retention and deletion</h2>
@@ -300,7 +314,7 @@
         <tr>
           <td>Game save</td>
           <td>Your device</td>
-          <td>Until you uninstall. We do not keep a cloud account.</td>
+          <td>Until you uninstall. We do not keep a cloud copy of the save.</td>
         </tr>
         <tr>
           <td>Crash reports</td>
@@ -328,6 +342,11 @@
           <td>Kept under Google’s own privacy policy. Google does not publish one retention number for all AdMob data. You can manage ad choices in Google Ad Center.</td>
         </tr>
         <tr>
+          <td>Leaderboard entry</td>
+          <td>Unity Gaming Services</td>
+          <td>Name, party, logo, and score are kept under Unity’s player privacy policy until you request deletion.</td>
+        </tr>
+        <tr>
           <td>Payment records</td>
           <td>Google Play or the App Store</td>
           <td>The store’s own retention rules. We never receive the card number.</td>
@@ -340,7 +359,7 @@
       <li>Support mail we hold: <a href="mailto:coinminervio@gmail.com">coinminervio@gmail.com</a></li>
       <li>AppLovin: the AppLovin Privacy Management app, or <a href="mailto:dataprotection@applovin.com">dataprotection@applovin.com</a></li>
       <li>Google ad data: <a href="https://myadcenter.google.com" rel="noopener">Google Ad Center</a></li>
-      <li>Unity: the request path in Unity’s player privacy policy</li>
+      <li>Unity Ads and the leaderboard: the request path in Unity’s player privacy policy. You can also email us about a leaderboard entry.</li>
     </ul>
     <p>
       A provider may keep a limited record longer when the law, fraud prevention,
@@ -351,7 +370,8 @@
     <p>
       The app is not directed to children under 13. Depending on where you live,
       you may request access, correction, deletion, or restriction, and you may
-      withdraw consent. Email
+      withdraw consent. In regions where consent is required, use Reklam tercihleri
+      in Settings, or the device and store ad settings. Email
       <a href="mailto:coinminervio@gmail.com">coinminervio@gmail.com</a>.
     </p>
   </div>
